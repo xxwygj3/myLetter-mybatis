@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ixygj.myletter.LetterNumberMapper">
+    <select id="selectLetterNumberList" resultType="com.ixygj.myletter.LetterNumber">
+        select id,issue,number,first,second,third,fourth,fifth,sixth,seventh
+        from letternumber
+    </select>
+
+    <insert id="insertLetterNumber" parameterType="String">
+        insert into letternumber(
+        issue,number,first,second,third,fourth,fifth,sixth,seventh
+        )
+        values (
+        #{issue,jdbcType=VARCHAR},
+        #{number,jdbcType=VARCHAR},
+        #{first,jdbcType=VARCHAR},
+        #{second,jdbcType=VARCHAR},
+        #{third,jdbcType=VARCHAR},
+        #{fourth,jdbcType=VARCHAR},
+        #{fifth,jdbcType=VARCHAR},
+        #{sixth,jdbcType=VARCHAR},
+        #{seventh,jdbcType=VARCHAR}
+        )
+    </insert>
+
+
+</mapper>
