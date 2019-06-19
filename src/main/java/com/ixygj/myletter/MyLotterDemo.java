@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MyLotterDemo {
     //文件所在路径
-    private static String path = "C:\\Users/evcar.com/Downloads/Fish-v328/Fish-v328/kpdf/MyLotter_99_to_2017.csv";
+    private static String path = "src/main/resources/MyLotter_99_to_2017.csv";
 
     public static void main(String[] args) throws Exception {
         //开始数据库连接

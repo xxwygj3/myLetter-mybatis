@@ -8,6 +8,11 @@
         from letternumber
     </select>
 
+    <select id="selectMaxIssue" resultType="String">
+        select max(issue)
+        from letternumber
+    </select>
+
     <insert id="insertLetterNumber" parameterType="String">
         insert into letternumber(
         issue,number,first,second,third,fourth,fifth,sixth,seventh
