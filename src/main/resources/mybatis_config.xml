@@ -18,5 +18,7 @@
     </environments>
     <mappers>
         <mapper resource="mappers/LetterNumberMapper.xml" />
+        <mapper resource="mappers/LetterNumberSumMapper.xml" />
+        <mapper resource="mappers/LetterNumberSubMapper.xml" />
     </mappers>
 </configuration>

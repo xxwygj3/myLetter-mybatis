@@ -1,38 +1,31 @@
 package com.ixygj.myletter;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class LetterNumber implements Serializable {
 
     private Integer id;
     private String issue;
-    private String number;
-    private String first;
-    private String second;
-    private String third;
-    private String fourth;
-    private String fifth;
-    private String sixth;
-    private String seventh;
+    private String numbers;
+    private String number1;
+    private String number2;
+    private String number3;
+    private String number4;
+    private String number5;
+    private String number6;
+    private String number7;
+    private int sumValue;
+    private String allSubNumbersList;
 
     public LetterNumber() {
     }
 
-    public LetterNumber(String issue, String number) {
+    public LetterNumber(String issue, String numbers,String allSubNumbersList) {
         this.issue = issue;
-        this.number = number;
-    }
-
-    public LetterNumber(String issue, String number, char[] numbers) {
-        this.issue = issue;
-        this.number = number;
-        this.first = String.valueOf(numbers[0]);
-        this.second = String.valueOf(numbers[1]);
-        this.third = String.valueOf(numbers[2]);
-        this.fourth = String.valueOf(numbers[3]);
-        this.fifth = String.valueOf(numbers[4]);
-        this.sixth = String.valueOf(numbers[5]);
-        this.seventh = String.valueOf(numbers[6]);
+        this.numbers = numbers;
+        initValue(numbers);
+        this.allSubNumbersList = allSubNumbersList;
     }
 
     public Integer getId() {
@@ -51,83 +44,131 @@ public class LetterNumber implements Serializable {
         this.issue = issue;
     }
 
-    public String getNumber() {
-        return number;
+    public String getNumbers() {
+        return numbers;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setNumbers(String numbers) {
+        this.numbers = numbers;
     }
 
-    public String getFirst() {
-        return first;
+    public String getNumber1() {
+        return number1;
     }
 
-    public void setFirst(String first) {
-        this.first = first;
+    public void setNumber1(String number1) {
+        this.number1 = number1;
     }
 
-    public String getSecond() {
-        return second;
+    public String getNumber2() {
+        return number2;
     }
 
-    public void setSecond(String second) {
-        this.second = second;
+    public void setNumber2(String number2) {
+        this.number2 = number2;
     }
 
-    public String getThird() {
-        return third;
+    public String getNumber3() {
+        return number3;
     }
 
-    public void setThird(String third) {
-        this.third = third;
+    public void setNumber3(String number3) {
+        this.number3 = number3;
     }
 
-    public String getFourth() {
-        return fourth;
+    public String getNumber4() {
+        return number4;
     }
 
-    public void setFourth(String fourth) {
-        this.fourth = fourth;
+    public void setNumber4(String number4) {
+        this.number4 = number4;
     }
 
-    public String getFifth() {
-        return fifth;
+    public String getNumber5() {
+        return number5;
     }
 
-    public void setFifth(String fifth) {
-        this.fifth = fifth;
+    public void setNumber5(String number5) {
+        this.number5 = number5;
     }
 
-    public String getSixth() {
-        return sixth;
+    public String getNumber6() {
+        return number6;
     }
 
-    public void setSixth(String sixth) {
-        this.sixth = sixth;
+    public void setNumber6(String number6) {
+        this.number6 = number6;
     }
 
-    public String getSeventh() {
-        return seventh;
+    public String getNumber7() {
+        return number7;
     }
 
-    public void setSeventh(String seventh) {
-        this.seventh = seventh;
+    public void setNumber7(String number7) {
+        this.number7 = number7;
+    }
+
+    public int getSumValue() {
+        return sumValue;
+    }
+
+    private void initValue(String numbers) {
+        int sumValue = 0;
+        String subStr = "";
+        for (int i = 0; i < 7; i++) {
+            subStr = numbers.substring(i, i + 1);
+            sumValue += Integer.valueOf(subStr);
+            switch (i) {
+                case 0:
+                    number1 = subStr;
+                    break;
+                case 1:
+                    number2 = subStr;
+                    break;
+                case 2:
+                    number3 = subStr;
+                    break;
+                case 3:
+                    number4 = subStr;
+                    break;
+                case 4:
+                    number5 = subStr;
+                    break;
+                case 5:
+                    number6 = subStr;
+                    break;
+                case 6:
+                    number7 = subStr;
+                    break;
+                default:
+            }
+        }
+        this.sumValue = sumValue;
+    }
+
+    public String getAllSubNumbersList() {
+        return allSubNumbersList;
+    }
+
+    public void setAllSubNumbersList(String allSubNumbersList) {
+        this.allSubNumbersList = allSubNumbersList;
     }
 
     @Override
     public String toString() {
         return "LetterNumber{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", issue='" + issue + '\'' +
-                ", number='" + number + '\'' +
-                ", first='" + first + '\'' +
-                ", second='" + second + '\'' +
-                ", third='" + third + '\'' +
-                ", fourth='" + fourth + '\'' +
-                ", fifth='" + fifth + '\'' +
-                ", sixth='" + sixth + '\'' +
-                ", seventh='" + seventh + '\'' +
+                ", numbers='" + numbers + '\'' +
+                ", number1='" + number1 + '\'' +
+                ", number2='" + number2 + '\'' +
+                ", number3='" + number3 + '\'' +
+                ", number4='" + number4 + '\'' +
+                ", number5='" + number5 + '\'' +
+                ", number6='" + number6 + '\'' +
+                ", number7='" + number7 + '\'' +
+                ", sumValue='" + sumValue + '\'' +
+                ", allSubNumbersList=" + allSubNumbersList +
                 '}';
     }
 }

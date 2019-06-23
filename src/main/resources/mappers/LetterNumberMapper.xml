@@ -4,7 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ixygj.myletter.LetterNumberMapper">
     <select id="selectLetterNumberList" resultType="com.ixygj.myletter.LetterNumber">
-        select id,issue,number,first,second,third,fourth,fifth,sixth,seventh
+        select
+        id
+        ,issue
+        ,numbers
+        ,number_1 as number1
+        ,number_2 as number2
+        ,number_3 as number3
+        ,number_4 as number4
+        ,number_5 as number5
+        ,number_6 as number6
+        ,number_7 as number7
+        ,sum_value as sumValue
+        ,all_sub_numbers_list as allSubNumbersList
         from letternumber
     </select>
 
@@ -13,20 +25,22 @@
         from letternumber
     </select>
 
-    <insert id="insertLetterNumber" parameterType="String">
+    <insert id="insertLetterNumber" parameterType="com.ixygj.myletter.LetterNumber">
         insert into letternumber(
-        issue,number,first,second,third,fourth,fifth,sixth,seventh
+        issue,numbers,number_1,number_2,number_3,number_4,number_5,number_6,number_7,sum_value,all_sub_numbers_list
         )
         values (
         #{issue,jdbcType=VARCHAR},
-        #{number,jdbcType=VARCHAR},
-        #{first,jdbcType=VARCHAR},
-        #{second,jdbcType=VARCHAR},
-        #{third,jdbcType=VARCHAR},
-        #{fourth,jdbcType=VARCHAR},
-        #{fifth,jdbcType=VARCHAR},
-        #{sixth,jdbcType=VARCHAR},
-        #{seventh,jdbcType=VARCHAR}
+        #{numbers,jdbcType=VARCHAR},
+        #{number1,jdbcType=VARCHAR},
+        #{number2,jdbcType=VARCHAR},
+        #{number3,jdbcType=VARCHAR},
+        #{number4,jdbcType=VARCHAR},
+        #{number5,jdbcType=VARCHAR},
+        #{number6,jdbcType=VARCHAR},
+        #{number7,jdbcType=VARCHAR},
+        #{sumValue,jdbcType=INTEGER},
+        #{allSubNumbersList,jdbcType=VARCHAR}
         )
     </insert>
 

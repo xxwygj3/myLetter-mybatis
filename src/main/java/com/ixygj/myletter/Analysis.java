@@ -1,39 +1,39 @@
 package com.ixygj.myletter;
 
-import org.apache.ibatis.session.SqlSession;
-
-import java.util.*;
-import java.util.Map.Entry;
-
 public class Analysis {
 
     public static void main(String[] args) {
-        //开始数据库连接
-        SqlSession sqlSession = MyBatisUtils.getSqlSession();
-        LetterNumberMapper letterNumberMapper = sqlSession.getMapper(LetterNumberMapper.class);
-
-        Map<String,Integer> linkedHashMap = new LinkedHashMap<String,Integer>();
-        //0000000-9999999
-
-        //新增记录
-        List<LetterNumber> letterNumberStrs = letterNumberMapper.selectLetterNumberList();
-        int i=0;
-        for(LetterNumber letterNumber:letterNumberStrs){
-            System.out.println("第"+(i++)+"条记录,读取成功"+letterNumber.toString());
-            String key = letterNumber.getNumber();
-            if(linkedHashMap.containsKey(key)){
-                linkedHashMap.put(key,linkedHashMap.get(key)+1);
-            }else{
-                linkedHashMap.put(key,1);
-            }
-        }
-
-        for(Entry<String, Integer> map:linkedHashMap.entrySet()){
-            System.out.println(map.getKey()+","+map.getValue());
-        }
-
-        //结束数据库连接
-        MyBatisUtils.closeSession(sqlSession);
+//       String str = "0392438";
+//       for(int i =0;i< 7;i++){
+//           String subStr = str.substring(i,i+1);
+//           System.out.println(subStr);
+//       }
+//        String str = "1234567";
+//        //2位子串
+//        for(int i =0;i< 6;i++){
+//           String subStr = str.substring(i,i+2);
+//           System.out.println(subStr);
+//        }
+//        //3位子串
+//        for(int i =0;i< 5;i++){
+//            String subStr = str.substring(i,i+3);
+//            System.out.println(subStr);
+//        }
+//        //4位子串
+//        for(int i =0;i< 4;i++){
+//            String subStr = str.substring(i,i+4);
+//            System.out.println(subStr);
+//        }
+//        //5位子串
+//        for(int i =0;i< 3;i++){
+//            String subStr = str.substring(i,i+5);
+//            System.out.println(subStr);
+//        }
+//        //6位子串
+//        for(int i =0;i< 2;i++){
+//            String subStr = str.substring(i,i+6);
+//            System.out.println(subStr);
+//        }
     }
 
 

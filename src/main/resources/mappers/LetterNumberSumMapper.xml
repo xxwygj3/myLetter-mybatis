@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ixygj.myletter.LetterNumberSumMapper">
+    <insert id="insertLetterNumberSum" parameterType="com.ixygj.myletter.LetterNumberSum">
+        insert into letternumbersum(
+        sum_value
+        ,sum_times
+        ,total_times
+        ,not_times
+        ,letter_numbers_list
+        ,all_numbers_list
+        ,not_letter_numbers_list
+        )
+        values (
+        #{sumValue,jdbcType=VARCHAR},
+        #{sumTimes,jdbcType=INTEGER},
+        #{totalTimes,jdbcType=INTEGER},
+        #{notTimes,jdbcType=INTEGER},
+        #{letterNumbersList,jdbcType=VARCHAR},
+        #{allNumbersList,jdbcType=VARCHAR},
+        #{notLetterNumbersList,jdbcType=VARCHAR}
+        )
+    </insert>
+</mapper>
