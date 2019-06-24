@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ixygj.myletter.LetterNumberMapper">
-    <select id="selectLetterNumberList" resultType="com.ixygj.myletter.LetterNumber">
+<mapper namespace="com.ixygj.myletter.mapper.LetterNumberMapper">
+    <select id="selectLetterNumberList" resultType="com.ixygj.myletter.entity.LetterNumber">
         select
         id
         ,issue
@@ -25,7 +25,7 @@
         from letternumber
     </select>
 
-    <insert id="insertLetterNumber" parameterType="com.ixygj.myletter.LetterNumber">
+    <insert id="insertLetterNumber" parameterType="com.ixygj.myletter.entity.LetterNumber">
         insert into letternumber(
         issue,numbers,number_1,number_2,number_3,number_4,number_5,number_6,number_7,sum_value,all_sub_numbers_list
         )

@@ -1,4 +1,4 @@
-package com.ixygj.myletter;
+package com.ixygj.myletter.util;
 
 import java.util.Comparator;
 

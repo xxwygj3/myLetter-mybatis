@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ixygj.myletter.LetterNumberSubMapper">
-    <insert id="insertLetterNumberSub" parameterType="com.ixygj.myletter.LetterNumberSub">
+<mapper namespace="com.ixygj.myletter.mapper.LetterNumberSubMapper">
+    <insert id="insertLetterNumberSub" parameterType="com.ixygj.myletter.entity.LetterNumberSub">
         insert into letternumbersub(
         sub_numbers,sub_times
         )

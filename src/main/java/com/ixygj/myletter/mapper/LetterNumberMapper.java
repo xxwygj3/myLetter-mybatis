@@ -1,4 +1,6 @@
-package com.ixygj.myletter;
+package com.ixygj.myletter.mapper;
+
+import com.ixygj.myletter.entity.LetterNumber;
 
 import java.util.List;
 

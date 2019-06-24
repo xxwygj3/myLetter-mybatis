@@ -1,4 +1,4 @@
-package com.ixygj.myletter;
+package com.ixygj.myletter.util;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
