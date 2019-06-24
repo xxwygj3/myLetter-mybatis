@@ -280,7 +280,7 @@ public class MyLotterDemo {
     }
 
     //自定义排序方法，返回有序map
-    private static Map<String, Integer> sortMapByKey(Map<String, Integer> linkedHashMap) {
+    public static Map<String, Integer> sortMapByKey(Map<String, Integer> linkedHashMap) {
         Map<String, Integer> treeMap = new TreeMap<>(new MapKeyComparator());
         treeMap.putAll(linkedHashMap);
         return treeMap;
