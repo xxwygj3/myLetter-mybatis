@@ -23,4 +23,17 @@
         #{notLetterNumbersList,jdbcType=VARCHAR}
         )
     </insert>
+
+    <select id="selectLetterNumberSumBysumValue" parameterType="java.lang.String" resultType="com.ixygj.myletter.entity.LetterNumberSum">
+        select id
+        ,sum_value as sumValue
+        ,sum_times as sumTimes
+        ,total_times as totalTimes
+        ,not_times as notTimes
+        ,letter_numbers_list as letterNumbersList
+        ,all_numbers_list as allNumbersList
+        ,not_letter_numbers_list as notLetterNumbersList
+        from letternumbersum
+        where sum_value = ${sumValue}
+    </select>
 </mapper>

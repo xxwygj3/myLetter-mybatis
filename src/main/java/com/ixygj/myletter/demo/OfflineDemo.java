@@ -12,6 +12,7 @@ import java.util.List;
 
 import static com.ixygj.myletter.util.SubListUtils.getAllSubList;
 
+//第一步：离线数据
 public class OfflineDemo {
     //文件所在路径
     private static final String INPUTPATH = "src/main/resources/MyLotter_99_to_2017.csv";

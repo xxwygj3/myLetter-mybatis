@@ -12,4 +12,25 @@
         #{endwiseTimes,jdbcType=INTEGER}
         )
     </insert>
+
+    <insert id="insertForeachLetterNumberEndwise" parameterType="java.util.List">
+        insert into letternumberendwise(
+        endwise_numbers,endwise_times
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.endwiseNumbers,jdbcType=VARCHAR},
+            #{item.endwiseTimes,jdbcType=INTEGER}
+            )
+        </foreach>
+    </insert>
+
+    <select id="selectLetterNumberEndwiseList" resultType="com.ixygj.myletter.entity.LetterNumberEndwise">
+        select
+        id
+        ,endwise_numbers as endwiseNumbers
+        ,endwise_times as endwiseTimes
+        from letternumberendwise
+    </select>
 </mapper>

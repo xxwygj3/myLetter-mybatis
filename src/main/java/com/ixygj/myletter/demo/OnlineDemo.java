@@ -19,6 +19,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+//第二步：在线数据
 public class OnlineDemo {
     //在线URL
     private static final String ONLINEURL = "https://kaijiang.500.com/static/info/kaijiang/xml/zj6j1/list.xml";

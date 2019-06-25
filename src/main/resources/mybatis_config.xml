@@ -21,5 +21,6 @@
         <mapper resource="mappers/LetterNumberSumMapper.xml" />
         <mapper resource="mappers/LetterNumberSubMapper.xml" />
         <mapper resource="mappers/LetterNumberEndwiseMapper.xml" />
+        <mapper resource="mappers/LetterNumberEndwiseModelMapper.xml" />
     </mappers>
 </configuration>

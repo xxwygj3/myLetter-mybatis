@@ -44,6 +44,17 @@ CREATE TABLE `letternumberendwise` (
 	PRIMARY KEY (`id`,`endwise_numbers`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
+drop table letternumberendwisemodel;
+CREATE TABLE `letternumberendwisemodel` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `endwise_model` varchar(11) NOT NULL COMMENT '7位模型（是否之前存在纵向7位号码，0否，1是）',
+	`model_times` int(9) NOT NULL COMMENT '7位模型出现次数',
+	PRIMARY KEY (`id`,`endwise_model`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+
 
 
 

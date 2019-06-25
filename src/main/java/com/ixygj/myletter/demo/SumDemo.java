@@ -10,6 +10,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+//第三步：已开奖数据求和分析
 public class SumDemo {
 
     public static void main(String[] args) {

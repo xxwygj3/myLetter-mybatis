@@ -20,6 +20,25 @@
         from letternumber
     </select>
 
+    <select id="selectLastSixIssueList" resultType="com.ixygj.myletter.entity.LetterNumber">
+        select
+        id
+        ,issue
+        ,numbers
+        ,number_1 as number1
+        ,number_2 as number2
+        ,number_3 as number3
+        ,number_4 as number4
+        ,number_5 as number5
+        ,number_6 as number6
+        ,number_7 as number7
+        ,sum_value as sumValue
+        ,all_sub_numbers_list as allSubNumbersList
+        from letternumber
+        order by issue desc
+        limit 6
+    </select>
+
     <select id="selectMaxIssue" resultType="String">
         select max(issue)
         from letternumber

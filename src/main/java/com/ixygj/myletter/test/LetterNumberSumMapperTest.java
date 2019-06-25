@@ -35,4 +35,9 @@ public class LetterNumberSumMapperTest {
             }
         }
     }
+
+    public static LetterNumberSum selectLetterNumberSumBysumValue(String sumValue){
+        LetterNumberSum letterNumberSum = letterNumberSumMapper.selectLetterNumberSumBysumValue(sumValue);
+        return letterNumberSum;
+    }
 }

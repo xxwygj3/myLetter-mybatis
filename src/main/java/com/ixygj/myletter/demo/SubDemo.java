@@ -8,6 +8,7 @@ import com.ixygj.myletter.test.LetterNumberSubMapperTest;
 import java.io.*;
 import java.util.*;
 
+//第四步：已开奖数据的子串（2位~6位）统计分析
 public class SubDemo {
     //文件所在路径
     private static final String OUTPUTPATH = "src/main/resources/MyLotter_sub_str.txt";
@@ -66,7 +67,8 @@ public class SubDemo {
             }
         }
         List<LetterNumberSub> letterNumberSubList = getLetterNumberSubList(submap);
-        LetterNumberSubMapperTest.insertLetterNumberSubList(letterNumberSubList);
+        //LetterNumberSubMapperTest.insertLetterNumberSubList(letterNumberSubList);
+        LetterNumberSubMapperTest.insertForeachLetterNumberSub(letterNumberSubList);
         System.out.println("===============保存统计子串结果到数据库中 结束=======================");
     }
 

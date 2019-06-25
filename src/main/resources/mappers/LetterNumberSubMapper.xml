@@ -12,4 +12,17 @@
         #{subTimes,jdbcType=INTEGER}
         )
     </insert>
+
+    <insert id="insertForeachLetterNumberSub" parameterType="java.util.List">
+        insert into letternumbersub(
+        sub_numbers,sub_times
+        )
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.subNumbers,jdbcType=VARCHAR},
+            #{item.subTimes,jdbcType=INTEGER}
+            )
+        </foreach>
+    </insert>
 </mapper>

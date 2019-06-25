@@ -1,5 +1,6 @@
 package com.ixygj.myletter.test;
 
+import com.ixygj.myletter.entity.LetterNumber;
 import com.ixygj.myletter.entity.LetterNumberEndwise;
 import com.ixygj.myletter.entity.LetterNumberSum;
 import com.ixygj.myletter.mapper.LetterNumberEndwiseMapper;
@@ -35,5 +36,28 @@ public class LetterNumberEndwiseMapperTest {
                 sqlSession.close();
             }
         }
+    }
+
+    public static void insertForeachLetterNumberEndwiseList(List<LetterNumberEndwise> letterNumberEndwiseList){
+        try {
+            //新增记录
+            int result = letterNumberEndwiseMapper.insertForeachLetterNumberEndwise(letterNumberEndwiseList);
+            if (result > 0) {
+                sqlSession.commit();
+                System.out.println("批量添加LetterNumberEndwise成功");
+            } else {
+                System.out.println("批量添加LetterNumberEndwise失败，回滚");
+                sqlSession.rollback();
+            }
+        }finally {
+            if(null != sqlSession){
+                sqlSession.close();
+            }
+        }
+    }
+
+    public static List<LetterNumberEndwise>  selectLetterNumberEndwiseList(){
+        List<LetterNumberEndwise> letterNumberEndwiseStrs = letterNumberEndwiseMapper.selectLetterNumberEndwiseList();
+        return letterNumberEndwiseStrs;
     }
 }

@@ -35,4 +35,24 @@ public class LetterNumberSubMapperTest {
             }
         }
     }
+
+    public static void insertForeachLetterNumberSub(List<LetterNumberSub> letterNumberSubList){
+        try{
+            //新增记录
+            int result = letterNumberSubMapper.insertForeachLetterNumberSub(letterNumberSubList);
+            if (result > 0) {
+                sqlSession.commit();
+                System.out.println("批量添加LetterNumberSub成功");
+            } else {
+                System.out.println("批量添加LetterNumberSub失败，回滚");
+                sqlSession.rollback();
+            }
+        }finally {
+            if(null != sqlSession){
+                sqlSession.close();
+            }
+        }
+
+
+    }
 }

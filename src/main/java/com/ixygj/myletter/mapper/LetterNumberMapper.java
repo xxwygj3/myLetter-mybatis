@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface LetterNumberMapper {
     List<LetterNumber> selectLetterNumberList();
+    List<LetterNumber> selectLastSixIssueList();
     String selectMaxIssue();
     int insertLetterNumber(LetterNumber letterNumber);
 }

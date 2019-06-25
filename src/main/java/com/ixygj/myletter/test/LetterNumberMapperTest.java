@@ -41,6 +41,11 @@ public class LetterNumberMapperTest {
         return letterNumberStrs;
     }
 
+    public static List<LetterNumber>  selectLastSixIssueList(){
+        List<LetterNumber> letterNumberStrs = letterNumberMapper.selectLastSixIssueList();
+        return letterNumberStrs;
+    }
+
     public static String selectMaxIssue(){
         String maxIssue = letterNumberMapper.selectMaxIssue();
         //System.out.println(maxIssue);//17154
