@@ -7,7 +7,7 @@ import com.ixygj.myletter.test.LetterNumberMapperTest;
 
 import java.util.*;
 
-//最近6期分析
+////第五步：最近6期分析
 public class LastSixIssueDemo {
 
     public static void main(String[] args) {
@@ -72,10 +72,10 @@ public class LastSixIssueDemo {
         System.out.println("===============查询历史纵向数据 结束=======================");
 
         for(Map.Entry<String,Integer> newnumbers:newnumbersLinkHashMap.entrySet()){
-//            //是否存在历史开奖数据
-//            if (numbersList.contains(newnumbers.getKey())) {
-//                newnumbers.setValue(1);
-//            }
+            //是否存在历史开奖数据
+            if (numbersList.contains(newnumbers.getKey())) {
+                newnumbers.setValue(1);
+            }
             //是否存在历史纵向数据
             if (endwiseNumbersList.contains(newnumbers.getKey())) {
                 newnumbers.setValue(1);
